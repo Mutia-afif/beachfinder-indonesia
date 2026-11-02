@@ -130,11 +130,16 @@ export default function HeroSearch({
         
         {/* Verified Dataset Pill */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/25 backdrop-blur-md border border-white/30 text-white text-xs font-semibold shadow-md">
+          <img
+            src="/logo-teknokrat.png"
+            alt="Universitas Teknokrat Indonesia"
+            className="w-5 h-5 object-contain shrink-0 drop-shadow-sm"
+          />
           <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
           <span className="material-symbols-outlined text-sm text-cyan-300">verified</span>
           <span>{totalBeaches.toLocaleString('id-ID')} Pantai Nusantara</span>
-          <span className="text-white/40">•</span>
-          <span className="text-white/80 font-normal">Audit Freshness 31 Okt 2026</span>
+          <span className="text-white/40 hidden md:inline">•</span>
+          <span className="text-white/80 font-normal hidden md:inline">Audit Freshness 31 Okt 2026</span>
         </div>
 
         {/* Interactive Scene Switcher Controls */}
@@ -171,9 +176,18 @@ export default function HeroSearch({
             <ChevronRight className="w-4 h-4" />
           </button>
           
-          <span className="text-[11px] font-semibold text-cyan-200 ml-1 border-l border-white/20 pl-2">
-            📍 {activeScene.province}
-          </span>
+          <div className="flex items-center gap-2 border-l border-white/20 pl-2">
+            <span className="text-[11px] font-semibold text-cyan-200">
+              📍 {activeScene.province}
+            </span>
+            <div className="bg-white/95 px-2 py-0.5 rounded-full shadow-sm flex items-center">
+              <img
+                src="/logo-ai-center.png"
+                alt="AI Center UTI"
+                className="h-3.5 sm:h-4 w-auto object-contain shrink-0"
+              />
+            </div>
+          </div>
         </div>
 
       </div>
