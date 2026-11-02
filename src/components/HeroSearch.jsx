@@ -18,7 +18,7 @@ const HERO_SCENES = [
     highlight: 'Tebing Karang T-Rex & Teluk Pirus',
     wave: '1.8 meter (Sedang)',
     ticket: 'Rp 10.000',
-    image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=2000&q=85',
+    image: 'https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=2000&q=85',
   },
   {
     id: 'lampung',
@@ -116,20 +116,20 @@ export default function HeroSearch({
           <img
             src={scene.image}
             alt={scene.name}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover brightness-110 contrast-105"
           />
         </div>
       ))}
 
-      {/* Atmospheric Overlays for Crystal Clear Contrast */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0B1C30] via-black/40 to-black/30 pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50 pointer-events-none" />
+      {/* Luminous, softly tinted overlay for crisp readability without darkening the scenery */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0B1C30]/40 via-black/15 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-black/10 pointer-events-none" />
 
       {/* Top Floating Scene Navigation Controller */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between mb-2">
         
         {/* Verified Dataset Pill */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-xs font-semibold shadow-lg">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/25 backdrop-blur-md border border-white/30 text-white text-xs font-semibold shadow-md">
           <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
           <span className="material-symbols-outlined text-sm text-cyan-300">verified</span>
           <span>{totalBeaches.toLocaleString('id-ID')} Pantai Nusantara</span>
@@ -138,7 +138,7 @@ export default function HeroSearch({
         </div>
 
         {/* Interactive Scene Switcher Controls */}
-        <div className="hidden sm:flex items-center gap-2 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 text-white text-xs shadow-lg">
+        <div className="hidden sm:flex items-center gap-2 bg-black/25 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 text-white text-xs shadow-md">
           <button
             onClick={handlePrevScene}
             className="p-1 hover:bg-white/20 rounded-full transition-colors cursor-pointer"
@@ -182,13 +182,13 @@ export default function HeroSearch({
       <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center my-auto py-6">
         
         {/* Official Brand Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-white text-xs font-semibold mb-3 shadow-md animate-fadeIn">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/25 backdrop-blur-md border border-white/25 text-white text-xs font-semibold mb-3 shadow-md animate-fadeIn">
           <img src="/logo-emblem.jpg" alt="BeachFinder Logo" className="w-5 h-5 rounded-md object-cover bg-white shadow-2xs" />
           <span className="tracking-wide">BeachFinder Indonesia • Eksplorasi 38 Provinsi</span>
         </div>
 
         {/* Dynamic Location Badge */}
-        <div className="block sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/50 backdrop-blur-md border border-cyan-400/40 text-cyan-300 text-xs font-bold mb-4 shadow-md animate-fadeIn">
+        <div className="block sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/30 backdrop-blur-md border border-cyan-300/40 text-cyan-200 text-xs font-bold mb-4 shadow-md animate-fadeIn">
           <Camera className="w-3.5 h-3.5 text-cyan-300" />
           <span>Latar Saat Ini: <strong>{activeScene.name}</strong> ({activeScene.province})</span>
           <span className="text-white/40">•</span>
@@ -196,21 +196,21 @@ export default function HeroSearch({
         </div>
 
         {/* Main Title */}
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight drop-shadow-md">
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.65)]">
           Eksplorasi Pantai Nusantara dengan <br className="hidden sm:inline" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-sky-200 to-amber-200">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-sky-100 to-amber-200 drop-shadow-[0_2px_12px_rgba(0,0,0,0.65)]">
             Kepastian Tarif Resmi & Keselamatan
           </span>
         </h1>
         
-        <p className="mt-3.5 text-sm sm:text-base text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow">
+        <p className="mt-3.5 text-sm sm:text-base text-white max-w-2xl mx-auto leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.7)] font-medium">
           Temukan 1.572 destinasi pesisir di 38 provinsi se-Nusantara, verifikasi dasar hukum retribusi tiket & parkir resmi, pantau telemetri ombak BMKG, dan laporkan pungutan liar langsung di satu tempat.
         </p>
 
         {/* Interactive Spotlight Quick Cards (Trending Destinations) */}
         {spotlightBeaches.length > 0 && (
           <div className="mt-6 flex flex-wrap items-center justify-center gap-2.5">
-            <span className="text-xs text-white/80 font-semibold flex items-center gap-1 mr-1">
+            <span className="text-xs text-white font-semibold flex items-center gap-1 mr-1 drop-shadow-sm">
               <Sparkles className="w-3.5 h-3.5 text-amber-300" />
               Destinasi Pilihan:
             </span>
@@ -220,7 +220,7 @@ export default function HeroSearch({
                 onClick={() => {
                   if (onSelectBeach) onSelectBeach(beach);
                 }}
-                className="group px-3 py-1.5 rounded-2xl bg-black/40 hover:bg-black/60 backdrop-blur-md border border-white/20 text-white text-xs font-semibold flex items-center gap-2 transition-all hover:scale-105 cursor-pointer shadow-lg"
+                className="group px-3 py-1.5 rounded-2xl bg-black/25 hover:bg-black/45 backdrop-blur-md border border-white/25 text-white text-xs font-semibold flex items-center gap-2 transition-all hover:scale-105 cursor-pointer shadow-md"
               >
                 <img
                   src={beach.photo}
@@ -232,7 +232,7 @@ export default function HeroSearch({
                   <Star className="w-3 h-3 fill-amber-300" />
                   {beach.rating > 0 ? beach.rating.toFixed(1) : '4.2'}
                 </span>
-                <ArrowRight className="w-3 h-3 text-cyan-300 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+                <ArrowRight className="w-3 h-3 text-cyan-300 opacity-80 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
               </button>
             ))}
           </div>
@@ -245,36 +245,36 @@ export default function HeroSearch({
         
         {/* 4 Feature Pillars Badge (Glassmorphic) */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto px-4 text-center mb-6">
-          <div className="bg-black/40 backdrop-blur-md p-2.5 rounded-2xl border border-white/20 text-white shadow-lg">
-            <p className="text-xs font-bold flex items-center justify-center gap-1.5 text-cyan-300">
+          <div className="bg-white/15 backdrop-blur-md p-2.5 rounded-2xl border border-white/25 text-white shadow-md hover:bg-white/20 transition-colors">
+            <p className="text-xs font-bold flex items-center justify-center gap-1.5 text-cyan-300 drop-shadow-xs">
               <span className="material-symbols-outlined text-base">gavel</span>
               Transparansi Perda
             </p>
-            <p className="text-[11px] text-white/70">Dasar hukum tarif resmi</p>
+            <p className="text-[11px] text-white/90">Dasar hukum tarif resmi</p>
           </div>
 
-          <div className="bg-black/40 backdrop-blur-md p-2.5 rounded-2xl border border-white/20 text-white shadow-lg">
-            <p className="text-xs font-bold flex items-center justify-center gap-1.5 text-cyan-300">
+          <div className="bg-white/15 backdrop-blur-md p-2.5 rounded-2xl border border-white/25 text-white shadow-md hover:bg-white/20 transition-colors">
+            <p className="text-xs font-bold flex items-center justify-center gap-1.5 text-cyan-300 drop-shadow-xs">
               <span className="material-symbols-outlined text-base">water</span>
               Telemetri BMKG
             </p>
-            <p className="text-[11px] text-white/70">Gelombang & pasang-surut</p>
+            <p className="text-[11px] text-white/90">Gelombang & pasang-surut</p>
           </div>
 
-          <div className="bg-black/40 backdrop-blur-md p-2.5 rounded-2xl border border-white/20 text-white shadow-lg">
-            <p className="text-xs font-bold flex items-center justify-center gap-1.5 text-emerald-300">
+          <div className="bg-white/15 backdrop-blur-md p-2.5 rounded-2xl border border-white/25 text-white shadow-md hover:bg-white/20 transition-colors">
+            <p className="text-xs font-bold flex items-center justify-center gap-1.5 text-emerald-300 drop-shadow-xs">
               <span className="material-symbols-outlined text-base">report</span>
               Kanal Anti-Pungli
             </p>
-            <p className="text-[11px] text-white/70">Lapor ketidaksesuaian</p>
+            <p className="text-[11px] text-white/90">Lapor ketidaksesuaian</p>
           </div>
 
-          <div className="bg-black/40 backdrop-blur-md p-2.5 rounded-2xl border border-white/20 text-white shadow-lg">
-            <p className="text-xs font-bold flex items-center justify-center gap-1.5 text-amber-300">
+          <div className="bg-white/15 backdrop-blur-md p-2.5 rounded-2xl border border-white/25 text-white shadow-md hover:bg-white/20 transition-colors">
+            <p className="text-xs font-bold flex items-center justify-center gap-1.5 text-amber-300 drop-shadow-xs">
               <span className="material-symbols-outlined text-base">explore</span>
               100% GPS Mapping
             </p>
-            <p className="text-[11px] text-white/70">1.572 koordinat satelit</p>
+            <p className="text-[11px] text-white/90">1.572 koordinat satelit</p>
           </div>
         </div>
 
