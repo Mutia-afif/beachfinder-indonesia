@@ -180,11 +180,19 @@ export default function HeroSearch({
             <span className="text-[11px] font-semibold text-cyan-200">
               📍 {activeScene.province}
             </span>
-            <div className="bg-white/95 px-2 py-0.5 rounded-full shadow-sm flex items-center">
+            <div className="bg-white/95 px-2.5 py-0.5 rounded-full shadow-sm flex items-center gap-2">
               <img
                 src="/logo-ai-center.png"
                 alt="AI Center UTI"
                 className="h-3.5 sm:h-4 w-auto object-contain shrink-0"
+                title="AI Center Universitas Teknokrat Indonesia"
+              />
+              <span className="w-px h-3 bg-slate-300 shrink-0" />
+              <img
+                src="/logo-ksti.png"
+                alt="KSTI 26"
+                className="h-3.5 sm:h-4 w-auto object-contain shrink-0"
+                title="KSTI 26 - Konvensi Sains, Teknologi, dan Industri Indonesia"
               />
             </div>
           </div>

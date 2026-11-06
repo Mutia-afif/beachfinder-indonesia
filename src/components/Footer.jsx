@@ -89,6 +89,28 @@ export default function Footer({ onSelectTab }) {
 
         </div>
 
+        {/* Kolaborasi Institusi & Konvensi Nasional */}
+        <div className="pt-6 pb-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 text-center sm:text-left">
+            <span className="text-[10px] text-white/50 font-bold uppercase tracking-wider">
+              Didukung & Dikembangkan Bersama:
+            </span>
+            <div className="flex items-center gap-2 bg-white/10 px-2.5 py-1 rounded-lg border border-white/15">
+              <img src="/logo-teknokrat.png" alt="Universitas Teknokrat Indonesia" className="h-5 w-auto object-contain" />
+              <span className="text-[11px] text-white font-semibold">Universitas Teknokrat Indonesia</span>
+            </div>
+            <div className="bg-white/95 px-2.5 py-1 rounded-lg shadow-xs flex items-center">
+              <img src="/logo-ai-center.png" alt="AI Center Teknokrat" className="h-4.5 w-auto object-contain" />
+            </div>
+            <div className="bg-white/95 px-2.5 py-1 rounded-lg shadow-xs flex items-center">
+              <img src="/logo-ksti.png" alt="KSTI 26" className="h-4.5 w-auto object-contain" />
+            </div>
+          </div>
+          <div className="text-[11px] text-cyan-200/80 font-medium text-center md:text-right">
+            <span>KSTI 2026 • Konvensi Sains, Teknologi, dan Industri Indonesia</span>
+          </div>
+        </div>
+
         {/* Bottom copyright */}
         <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-white/50">
           <p>© 2026 BeachFinder Indonesia. Seluruh hak cipta dilindungi undang-undang.</p>

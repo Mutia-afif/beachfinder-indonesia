@@ -106,6 +106,13 @@ export default function Navbar({
 
           {/* Right Action: Admin Portal di Ujung */}
           <div className="hidden sm:flex items-center pl-4 lg:pl-6 border-l border-ocean-outline/30 shrink-0">
+            {/* KSTI 26 Affiliation Pill in Navbar */}
+            <div className="hidden 2xl:flex items-center gap-2 mr-3 px-2.5 py-1 rounded-xl bg-surface-low border border-ocean-outline/40 select-none">
+              <span className="text-[10px] font-bold text-ocean-muted uppercase tracking-wider">KSTI '26</span>
+              <span className="w-px h-3 bg-ocean-outline/40" />
+              <img src="/logo-ksti.png" alt="KSTI 26" className="h-3.5 w-auto object-contain" title="Konvensi Sains, Teknologi, dan Industri Indonesia" />
+            </div>
+
             <div className="flex items-center gap-2 shrink-0">
               <button
                 onClick={() => handleSelectTab('admin')}
@@ -225,6 +232,19 @@ export default function Navbar({
               <span>Keluar Sesi Admin ({adminSession.displayName})</span>
             </button>
           )}
+
+          {/* Mobile Drawer Affiliations */}
+          <div className="pt-3 mt-2 border-t border-ocean-outline/20 flex items-center justify-center gap-3 px-2">
+            <img src="/logo-teknokrat.png" alt="UTI" className="h-5 w-auto object-contain" />
+            <span className="w-px h-3 bg-ocean-outline/40" />
+            <div className="bg-white px-2 py-0.5 rounded shadow-2xs flex items-center">
+              <img src="/logo-ai-center.png" alt="AI Center" className="h-3.5 w-auto object-contain" />
+            </div>
+            <span className="w-px h-3 bg-ocean-outline/40" />
+            <div className="bg-white px-2 py-0.5 rounded shadow-2xs flex items-center">
+              <img src="/logo-ksti.png" alt="KSTI 26" className="h-3.5 w-auto object-contain" />
+            </div>
+          </div>
         </div>
       )}
     </header>
