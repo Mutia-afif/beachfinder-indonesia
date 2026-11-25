@@ -95,15 +95,30 @@ export default function Footer({ onSelectTab }) {
             <span className="text-[10px] text-white/50 font-bold uppercase tracking-wider">
               Didukung & Dikembangkan Bersama:
             </span>
-            <div className="flex items-center gap-2 bg-white/10 px-2.5 py-1 rounded-lg border border-white/15">
-              <img src="/logo-teknokrat.png" alt="Universitas Teknokrat Indonesia" className="h-5 w-auto object-contain" />
+            <div className="h-8 flex items-center gap-2 bg-white/10 px-2.5 rounded-lg border border-white/15 shrink-0">
+              <img
+                src="/logo-teknokrat.png"
+                alt="Universitas Teknokrat Indonesia"
+                className="h-5 w-5 object-contain shrink-0"
+                style={{ height: '20px', width: '20px' }}
+              />
               <span className="text-[11px] text-white font-semibold">Universitas Teknokrat Indonesia</span>
             </div>
-            <div className="bg-white/95 px-2.5 py-1 rounded-lg shadow-xs flex items-center">
-              <img src="/logo-ai-center.png" alt="AI Center Teknokrat" className="h-4.5 w-auto object-contain" />
+            <div className="h-8 bg-white/95 px-2.5 rounded-lg shadow-xs flex items-center shrink-0">
+              <img
+                src="/logo-ai-center.png"
+                alt="AI Center Teknokrat"
+                className="h-5 max-h-5 w-auto object-contain"
+                style={{ height: '20px', width: 'auto' }}
+              />
             </div>
-            <div className="bg-white/95 px-2.5 py-1 rounded-lg shadow-xs flex items-center">
-              <img src="/logo-ksti.png" alt="KSTI 26" className="h-4.5 w-auto object-contain" />
+            <div className="h-8 bg-white/95 px-2.5 rounded-lg shadow-xs flex items-center shrink-0">
+              <img
+                src="/logo-ksti.png"
+                alt="KSTI 26"
+                className="h-5 max-h-5 w-auto object-contain"
+                style={{ height: '20px', width: 'auto' }}
+              />
             </div>
           </div>
           <div className="text-[11px] text-cyan-200/80 font-medium text-center md:text-right">
